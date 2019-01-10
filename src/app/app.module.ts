@@ -4,21 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GridComponent } from './grid/grid.component';
+import { CustomerComponent } from './home/customer/customer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainComponent,
+    HomeComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    GridComponent
+    GridComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
