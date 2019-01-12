@@ -1688,13 +1688,17 @@ File: scss
   padding-bottom: 60px; }
 
 .container-fluid {
-  padding: 0 30px 25px 30px; }
+  padding: 0 30px 25px 30px;
+  position: relative;
+  top: 70px;
+}
 
 /*******************
  Topbar
 *******************/
 .topbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 50;
   -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5); }

@@ -38,7 +38,10 @@
               "src/assets/js/sidebarmenu.js",
               "src/assets/js/jquery.sparkline.min.js",
               "src/assets/js/sticky-kit.min.js", 
-              "src/assets/js/custom.js"
+              "src/assets/js/custom.js",
+              "src/assets/js/chartjs.init.js", 
+              "src/assets/js/chart.min.js",
+              "src/assets/js/jQuery.style.switcher.js"
             ]
           },
           "configurations": {

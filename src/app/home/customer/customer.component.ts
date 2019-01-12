@@ -11,7 +11,7 @@ export class CustomerComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        $('#monthchart').sparkline([5, 6, 2, 9, 4, 7, 10, 12], {
+        $('.monthchart').sparkline([5, 6, 2, 9, 4, 7, 10, 12], {
             type: 'bar',
             height: '35',
             barWidth: '4',

@@ -9,7 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { GridComponent } from './grid/grid.component';
-import { CustomerComponent } from './home/customer/customer.component'
+import { CustomerComponent } from './home/customer/customer.component';
+import { NewSubscriptionComponent } from './home/new-subscription/new-subscription.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { InvoicesComponent } from './home/invoices/invoices.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CustomerComponent } from './home/customer/customer.component'
     FooterComponent,
     SidebarComponent,
     GridComponent,
-    CustomerComponent
+    CustomerComponent,
+    NewSubscriptionComponent,
+    DashboardComponent,
+    InvoicesComponent
   ],
   imports: [
     BrowserModule,

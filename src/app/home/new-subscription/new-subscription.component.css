@@ -1,0 +1,33 @@
+.container-fluid {
+    padding: 30px;
+    position: relative;
+    top: 70px;
+}
+.card-body {
+    padding: 0 30px 30px 30px;
+}
+.form-group {
+    display: flex;
+    align-items: baseline;
+}
+.card-heading {
+    color: #1E88E5;
+    padding-bottom: 20px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: space-between
+}
+button {
+    padding: 8px 50px;
+}
+.save-btn {
+    margin-left: 10px;
+    color: #fff;
+    background-color: #1E88E5;
+    border: 1px solid #1E88E5;
+}
+.activate-btn {
+    background: #47d147;
+    color: #fff;
+}

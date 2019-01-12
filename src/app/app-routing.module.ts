@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CustomerComponent } from './home/customer/customer.component';
+import { NewSubscriptionComponent } from './home/new-subscription/new-subscription.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { InvoicesComponent } from './home/invoices/invoices.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -10,7 +13,10 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent,
     children: [
-      { path: 'customer', component: CustomerComponent }
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'customer', component: CustomerComponent },
+      { path: 'newSubscription', component: NewSubscriptionComponent },
+      { path: 'invoices', component: InvoicesComponent }
     ]
   }
 ];
