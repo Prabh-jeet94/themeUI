@@ -1,0 +1,12 @@
+
+.container-fluid {
+    padding: 30px;
+    position: relative;
+    top: 70px;
+}
+.upload-area {
+    width: 100%;
+    text-align: center;
+    background: #EEF5F9;
+    padding-bottom: 20px;
+}

@@ -12,7 +12,9 @@ import { GridComponent } from './grid/grid.component';
 import { CustomerComponent } from './home/customer/customer.component';
 import { NewSubscriptionComponent } from './home/new-subscription/new-subscription.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
-import { InvoicesComponent } from './home/invoices/invoices.component'
+import { InvoicesComponent } from './home/invoices/invoices.component';
+import { ServicesComponent } from './home/services/services.component';
+import { WeavesComponent } from './home/services/weaves/weaves.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { InvoicesComponent } from './home/invoices/invoices.component'
     CustomerComponent,
     NewSubscriptionComponent,
     DashboardComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    ServicesComponent,
+    WeavesComponent
   ],
   imports: [
     BrowserModule,

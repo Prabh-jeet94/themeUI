@@ -1,0 +1,13 @@
+.table-heading {
+   justify-content: space-between;
+}
+.table-add-category {
+    align-items: baseline;
+}
+.download-csv {
+    font-size: 13px;
+    cursor: pointer;
+}
+.download-csv span {
+    font-size: 23px;
+}
