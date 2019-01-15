@@ -44,6 +44,7 @@ $(function () {
     // Theme options
     // ==============================================================     
     $(".sidebartoggler").on('click', function () {
+        console.log("here")
         if ($("body").hasClass("mini-sidebar")) {
             $("body").trigger("resize");
             $(".scroll-sidebar, .slimScrollDiv").css("overflow", "hidden").parent().css("overflow", "visible");

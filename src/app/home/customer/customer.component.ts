@@ -11,21 +11,29 @@ export class CustomerComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        $('.monthchart').sparkline([5, 6, 2, 9, 4, 7, 10, 12], {
+        $('#usersChart').sparkline([35, 26, 24, 39, 24, 32, 30, 36, 29, 30, 27, 22], {
             type: 'bar',
             height: '35',
-            barWidth: '4',
+            barWidth: '6',
             resize: true,
-            barSpacing: '4',
-            barColor: '#1e88e5'
-        });
-    $('#lastmonthchart').sparkline([5, 6, 2, 9, 4, 7, 10, 12], {
+            barSpacing: '2',
+            barColor: '#00ffcc'
+          });
+          $('#earningChart').sparkline([35, 26, 24, 39, 24, 32, 30, 36, 29, 30, 27, 22], {
             type: 'bar',
             height: '35',
-            barWidth: '4',
+            barWidth: '6',
             resize: true,
-            barSpacing: '4',
-            barColor: '#7460ee'
-        });
+            barSpacing: '2',
+            barColor: '#dd99ff'
+          });
+          $('#stylistsChart').sparkline([35, 26, 24, 39, 24, 32, 30, 36, 29, 30, 27, 22], {
+            type: 'bar',
+            height: '35',
+            barWidth: '6',
+            resize: true,
+            barSpacing: '2',
+            barColor: '#99e6ff'
+          });
     }
 }

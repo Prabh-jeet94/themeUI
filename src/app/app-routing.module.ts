@@ -10,8 +10,8 @@ import { ServicesComponent } from './home/services/services.component';
 import { WeavesComponent } from './home/services/weaves/weaves.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: '', component: HomeComponent,
     children: [
@@ -19,10 +19,12 @@ const routes: Routes = [
       { path: 'customer', component: CustomerComponent },
       { path: 'newSubscription', component: NewSubscriptionComponent },
       { path: 'invoices', component: InvoicesComponent },
-      { path: 'services', component: ServicesComponent,
-       children:[
-        {path: '', component: WeavesComponent}
-      ]}
+      {
+        path: 'services', component: ServicesComponent,
+        children: [
+          { path: 'weaves', component: WeavesComponent }
+        ]
+      }
     ]
   }
 ];

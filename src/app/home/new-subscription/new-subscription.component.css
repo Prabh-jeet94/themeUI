@@ -31,3 +31,9 @@ button {
     background: #47d147;
     color: #fff;
 }
+.label-width-50 {
+    width: 50%;
+}
+.label-width-20 {
+    width: 20%;
+}

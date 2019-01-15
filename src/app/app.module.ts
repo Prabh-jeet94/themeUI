@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { InvoicesComponent } from './home/invoices/invoices.component';
 import { ServicesComponent } from './home/services/services.component';
 import { WeavesComponent } from './home/services/weaves/weaves.component';
+import { HttpInterceptorService } from './app-services/http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +37,15 @@ import { WeavesComponent } from './home/services/weaves/weaves.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

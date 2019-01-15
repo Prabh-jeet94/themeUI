@@ -27,6 +27,7 @@
               "src/assets/css/prism.css",
               "src/assets/css/style.css",
               "src/assets/css/blue.css",
+              "./node_modules/ngx-toastr/toastr.css",
               "src/custom-styles.css"
             ],
             "scripts": [

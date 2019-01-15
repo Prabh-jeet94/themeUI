@@ -10,3 +10,6 @@
     background: #EEF5F9;
     padding-bottom: 20px;
 }
+.list-group-item {
+    border-radius: 0;
+}
