@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse } from '@angular/common/http';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
@@ -8,30 +8,21 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class HttpInterceptorService implements HttpInterceptor {
+  private readonly headers: HttpHeaders;
+  constructor(private toast: ToastrService) {
+    this.headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'});
+   }
 
-  constructor(private toast: ToastrService) { }
+   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const
+        contentTypeHeader = !req.body  ? {} : {'Content-Type': 'application/json'},
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    //how to update the request Parameters
-    const updatedRequest = request.clone({
-      headers: request.headers.set("Authorization", "Some-dummyCode")
-    });
-    //logging the updated Parameters to browser's console
-    return next.handle(request).pipe(
-      tap(
-        event => {
-          //logging the http response to browser's console in case of a success
-          if (event instanceof HttpResponse) {
-            this.toast.success("Successfully made api call");
-          }
-        },
-        error => {
-          //logging the http response to browser's console in case of a failuer
-          if (event instanceof HttpResponse) {
-           this.toast.error(error);
-          }
-        }
-      )
-    );
-  }
+        request = req.clone({
+            headers: this.headers,
+            setHeaders: {
+                ...contentTypeHeader
+            }
+        });
+    return next.handle(request);
+}
 }

@@ -77,35 +77,23 @@ export class DashboardComponent implements OnInit {
         responsive: true
     });
     
-    var ctx4 = document.getElementById("bookingChart").getContext("2d");
+    var ctxBooking = document.getElementById("chartBooking").getContext("2d");
     var bookingChartData = [
         {
             value: 300,
-            color:"#55D8FE",
-            highlight: "#55D8FE",
-            label: "Cash"
+            color:"#FFDA83",
+            highlight: "#FFDA83",
+            label: "Stylists"
         },
         {
             value: 50,
             color: "#FF8373",
             highlight: "#FF8373",
-            label: "Credit card"
+            label: "Customers"
         },
-        {
-            value: 100,
-            color: "#FFDA83",
-            highlight: "#FFDA83",
-            label: "Debit card"
-        },
-        {
-            value: 50,
-            color: "#A3A0FB",
-            highlight: "#A3A0FB",
-            label: "Others"
-        }
     ];
     
-    var myDoughnutChart = new Chart(ctx4).Doughnut(bookingChartData,{
+    var myDoughnutChart = new Chart(ctxBooking).Doughnut(bookingChartData,{
         segmentShowStroke : true,
         segmentStrokeColor : "#fff",
         segmentStrokeWidth : 0,

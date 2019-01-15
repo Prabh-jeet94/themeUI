@@ -16,3 +16,13 @@
     width: 100%;
     align-items: center;
 }
+.legend-color{
+    align-items: baseline;
+    width: 90px;
+}
+.legend {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding-right: 5px
+}
